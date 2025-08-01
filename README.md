@@ -1,76 +1,62 @@
-Mini Weather Dashboard App
+🌦️ Mini Weather Dashboard App
+📋 Overview
+This is a simple Android application that fetches and displays weather data for a user-specified city using the OpenWeatherMap API.
+The app is built using Clean Architecture, Jetpack Compose, Koin, Ktor, and DataStore, and includes several bonus features:
 
-Overview
+✅ Loading state
+✅ Weather icon display
+✅ Last searched city persistence
 
-This is a simple Android application that fetches and displays weather data for a user-specified city using the OpenWeatherMap API. 
-The app is built with Clean Architecture, Jetpack Compose, Koin for dependency injection, Ktor for networking, and DataStore for persisting the last searched city. It fulfills all requirements and includes bonus features like a loading state, weather icon display, and persistence.
+🏗️ Architecture
+The app follows Clean Architecture, separating concerns across three layers:
 
-Architecture:
+Domain Layer
 
+Contains business logic:
 
+CurrentWeather model
 
+GetCurrentWeatherUseCase
 
+Data Layer
 
-Used Clean Architecture with Domain, Data, and Presentation layers to ensure separation of concerns, testability, and maintainability.
+Handles external data:
 
+API interaction via WeatherApi
 
+Implementation in WeatherRepositoryImpl
 
-Domain layer contains independent business logic (CurrentWeather model, GetCurrentWeatherUseCase).
+Persistence with PreferencesDataStore
 
+Presentation Layer
 
+UI & state management using Jetpack Compose:
 
-Data layer handles API calls (WeatherApi, WeatherRepositoryImpl) and persistence (PreferencesDataStore).
+MainActivity
 
+WeatherViewModel
 
+🧰 Tech Stack
+Technology	Purpose
+Jetpack Compose	Modern, declarative UI toolkit with reactive capabilities
+Koin	is a Lightweight DI framework, simple and suitable for small projects
+Ktor	Kotlin-native HTTP client for network requests and JSON serialization
+DataStore: Modern data storage solution, type-safe and coroutine-friendly
+Coil	Efficient image loading for displaying weather icons
+MockK: A Mocking library for unit testing Kotlin classes
+Turbine	Tool for testing Kotlin Flows
 
-Presentation layer manages UI (MainActivity, WeatherViewModel) with Jetpack Compose.
+🌐 API
+Used OpenWeatherMap’s Current Weather Data API
+The 
+API key is hardcoded for simplicity, as allowed in the assignment
 
+In production, sensitive keys should be stored securely using BuildConfig, encrypted storage, or environment variables.
 
+⚠️ Error Handling
+Displays user-friendly messages for:
 
-Tech Stack:
+Network errors (e.g., no internet)
 
+Invalid city names (e.g., “City not found”)
 
-
-
-
-Jetpack Compose: Chosen for modern, declarative UI development, enabling a responsive and clean interface (bonus requirement).
-
-
-
-Koin: Lightweight dependency injection framework, simpler than Hilt for a small app.
-
-
-
-Ktor: Used for networking due to its Kotlin-native design and flexibility with JSON serialization.
-
-
-
-DataStore: Implemented for persisting the last searched city (bonus requirement), preferred over SharedPreferences for type safety.
-
-
-
-Coil: Used for loading weather icons from OpenWeatherMap (bonus requirement).
-
-
-
-API:
-
-
-
-
-
-Utilized OpenWeatherMap’s free Current Weather Data API for simplicity and reliability.
-
-
-
-Hardcoded the API key in ApiKey.kt as permitted by the assignment. In production, I’d store it securely using BuildConfig or environment variables.
-
-
-
-Error Handling:
-
-
-
-
-
-Handles network failures and invalid city inputs, displaying user-friendly messages (e.g., "City not found or unexpected error").
