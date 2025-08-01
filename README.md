@@ -48,7 +48,8 @@ WeatherViewModel
 
 🧰 Tech Stack
 Technology	Purpose
-Jetpack Compose	Modern, declarative UI toolkit with reactive capabilities
+Jetpack Compose	Modern, 
+declarative UI toolkit with reactive capabilities
 Koin	Lightweight dependency injection framework, ideal for small projects
 Ktor	Kotlin-native HTTP client for network calls and JSON serialization
 DataStore	Type-safe, coroutine-friendly modern data storage solution
