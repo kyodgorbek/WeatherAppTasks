@@ -46,16 +46,19 @@ MainActivity
 
 WeatherViewModel
 
+
+
 🧰 Tech Stack
-Technology	Purpose
-Jetpack Compose	Modern, 
-declarative UI toolkit with reactive capabilities
-Koin	Lightweight dependency injection framework, ideal for small projects
-Ktor	Kotlin-native HTTP client for network calls and JSON serialization
-DataStore	Type-safe, coroutine-friendly modern data storage solution
-Coil	Efficient image loading for displaying weather icons
-MockK	Powerful mocking framework for Kotlin unit tests
-Turbine	Tool for testing Kotlin Flows
+| Technology          | Purpose                                                              |
+| ------------------- | -------------------------------------------------------------------- |
+| **Jetpack Compose** | Modern, declarative UI toolkit with reactive capabilities            |
+| **Koin**            | Lightweight dependency injection framework, ideal for small projects |
+| **Ktor**            | Kotlin-native HTTP client for network calls and JSON serialization   |
+| **DataStore**       | Type-safe, coroutine-friendly modern data storage solution           |
+| **Coil**            | Efficient image loading library used to display weather icons        |
+| **MockK**           | Powerful mocking framework for Kotlin unit tests                     |
+| **Turbine**         | Tool for unit testing Kotlin Flows                                   |
+
 
 🌐 API
 Uses OpenWeatherMap’s Current Weather Data API
