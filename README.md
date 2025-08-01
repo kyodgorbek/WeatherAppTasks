@@ -1,4 +1,5 @@
 🌦️ Mini Weather Dashboard App
+
 📋 Overview
 This is a simple Android application that fetches and displays weather data for a user-specified city using the OpenWeatherMap API.
 
